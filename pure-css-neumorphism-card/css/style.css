@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1F2C33;
+  min-height: 100vh;
+  color: #333333;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1b262c;
+}
+
+
+.icon {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 4rem;
+}
+
+.container {
+  position: relative;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.container .card {
+  position: relative;
+  height: 250px;
+  background-color: whitesmoke;
+  display: flex;
+  width: 45%;
+  margin: 30px 0;
+  border-radius: 9px;
+}
+
+.container .card .imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  border-radius: 7px;
+  background: linear-gradient(145deg, #24333c, #1f2b32);
+  background: linear-gradient(145deg, #1f2b32, #24333c);
+  box-shadow:  13px 13px 26px #1d282f, 
+             -13px -13px 26px #273841;
+}
+
+.container .card:hover .imgBox {
+  width: 150px;
+  height: 150px;
+  left: -75px;
+  top: calc(50% - 75px);
+  transition: 0.5s ease-in-out;
+  background: #ed6663;
+  box-shadow: none;
+}
+
+.container .card .imgBox:before {
+  content: attr(data-text);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: "Inconsolata", monospace;
+  font-size: 4em;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 700;
+}
+
+.container .card .imgBox i {
+  max-width: 100px;
+  transition: 0.5s ease-in-out;
+}
+
+.container .card:hover .imgBox i {
+  max-width: 75px;
+}
+
+.container .card .content {
+  position: absolute;
+  right: 0;
+  width: calc(100% - 75px);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.container .card .content h3 {
+  margin-bottom: 5px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: whitesmoke;
+  border-radius: 17px;
+  border-radius: 5px;
+  background: #1b262c;
+  box-shadow:  0px 0px 2px #182127;
+  font-size: 0.8rem;
+}
+
+/* MEDIA QURERIES */ 
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .card {
+    width: 270px;
+  }
+
+  .container .card .imgBox:before {
+    content: attr(data-text);
+    font-size: 2.8em;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .card {
+    width: 380px;
+  }
+
+  .container .card .imgBox:before {
+    content: attr(data-text);
+    font-size: 2.8em;
+  }
+
+}
+
