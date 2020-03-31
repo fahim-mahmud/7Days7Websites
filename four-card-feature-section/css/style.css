@@ -32,6 +32,10 @@ a {
 
 /* TYPOGRAPHY */
 
+h1 {
+  color: hsl(234, 12%, 34%);
+}
+
 p {
   font-weight: 200;
 }
