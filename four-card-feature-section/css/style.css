@@ -1,0 +1,229 @@
+/* GLOBAL STYLING */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(229, 6%, 66%);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(234, 12%, 34%);
+}
+
+/* TYPOGRAPHY */
+
+p {
+  font-weight: 200;
+}
+
+/* MAIN CONTENT */
+
+.header {
+  text-align: center;
+  margin: 50px 0 50px 0; 
+  padding: 10px 0 10px 0;
+  width: 100%;
+}
+
+.title--one {
+  font-weight: 200;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: hsl(234, 12%, 34%);
+}
+
+.title--two {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: hsl(234, 12%, 34%);
+}
+
+.desc--content {
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: hsl(234, 12%, 34%);
+  padding: 1rem;
+  color: hsl(229, 6%, 66%);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 550px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+.column--one {
+  margin-right: 2rem;
+  padding: 1.5rem;
+  border-top: 4px solid hsl(180, 62%, 55%);
+  border-radius: 5px;
+  box-shadow: 3px 15px 15px rgba(0,0,0,0.1);
+}
+
+.supervisor {
+  max-width: 290px;
+  max-height: 180px;
+}
+
+.supervisor h1 {
+  margin-bottom: 0.7rem;
+}
+
+.supervisor p {
+  margin-bottom: 2.2rem;
+  padding-right: 3rem;
+}
+
+.icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.column--one .icon img {
+  margin-bottom: 1rem;
+  
+}
+
+.column--two {
+  margin: -3rem 1rem 1rem 0;
+  /* padding: 1.5rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+}
+
+.content--one, .content--two {
+  margin: 1rem 0 1rem 0;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 3px 15px 15px rgba(0,0,0,0.1);
+}
+
+.content--one {
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.content--two {
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.team-builder, .karma {
+  max-width: 290px;
+  max-height: 200px;
+}
+
+.team-builder, .karma h1 {
+  margin-bottom: 0.7rem;
+}
+
+.team-builder p {
+  margin-bottom: 2.2rem;
+  padding-right: 3rem;
+}
+
+.karma p {
+  margin-bottom: 2.2rem;
+  padding-right: 3rem;
+}
+
+.column--three {
+  margin-left: 1rem;
+  padding: 1.5rem;
+  border-top: 4px solid hsl(212, 86%, 64%);
+  border-radius: 5px;
+  box-shadow: 3px 15px 15px rgba(0,0,0,0.1);
+}
+
+.calculator {
+  max-width: 290px;
+  max-height: 180px;
+}
+
+.calculator h1 {
+  margin-bottom: 0.7rem;
+}
+
+.calculator p {
+  margin-bottom: 2.2rem;
+  padding-right: 3rem;
+}
+
+.attribution {
+  padding: 10px;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 500px) {
+
+  * {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .header {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
+  .title--one, .title--two {
+    font-size: 1.5rem;
+  }
+
+  .desc--content {
+    max-width: 320px;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 320px;
+  }
+
+  .column--one,
+  .column--two,
+  .column--three {
+    margin:0 0 1rem 0;
+  }
+
+  .attribution {
+    text-align: center;
+    font-size: 10px;
+    padding: 2px;
+  }
+
+}
